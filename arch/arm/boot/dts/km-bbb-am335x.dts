@@ -42,6 +42,23 @@
 
 };
 
+&am33xx_pinmux {
+       led_switch_buz: mux_led_switch_buzzer_pins {
+                pinctrl-single,pins = <
+                        AM33XX_PADCONF(AM335X_PIN_LCD_DATA13, PIN_OUTPUT, MUX_MODE7)
+                        AM33XX_PADCONF(AM335X_PIN_LCD_DATA14, PIN_OUTPUT, MUX_MODE7)
+                        AM33XX_PADCONF(AM335X_PIN_LCD_DATA15, PIN_INPUT_PULLDOWN, MUX_MODE7)
+                >;
+        };
+};
+
+&uart0 {
+        pinctrl-names = "default";
+        pinctrl-0 = <&led_switch_buz>;
+
+        status = "okay";
+};
+
 &cpu0_opp_table {
 	/*
 	 * All PG 2.0 silicon may not support 1GHz but some of the early
