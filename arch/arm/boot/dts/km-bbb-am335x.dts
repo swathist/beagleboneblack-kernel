@@ -6,6 +6,7 @@
 
 #include "am33xx.dtsi"
 #include "am335x-bone-common.dtsi"
+#include "swathi_sample_dt.dtsi"
 /* #include "am335x-boneblack-common.dtsi" */
 
 / {

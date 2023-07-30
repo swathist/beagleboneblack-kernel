@@ -1,0 +1,9 @@
+/ {
+	compatible = "ti,am335x-bone-black","ti,am335x-bone","ti,am33xx";
+	biodata {
+		compatible = "SDE1";
+		myname = "swathist";
+		myid = <10304>;
+		status = "okay";
+	};
+};
